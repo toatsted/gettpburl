@@ -10,6 +10,8 @@
   "license": "ISC",
   "dependencies": {
     "axios": "^0.18.0",
-    "cheerio": "^1.0.0-rc.2"
+    "chalk": "^2.4.1",
+    "cheerio": "^1.0.0-rc.2",
+    "thepiratebay": "^1.4.7"
   }
 }
