@@ -2,7 +2,6 @@ const axios = require("axios");
 const chalk = require("chalk");
 const cheerio = require("cheerio");
 
-
 if( process.argv[2] === "-o" || process.argv[2] === "-u" ||
    process.argv[2] === "--onion" || process.argv[2] === "--url" ) {
   axios({
@@ -41,6 +40,6 @@ if( process.argv[2] === "-o" || process.argv[2] === "-u" ||
 
 
 } else {
-  require("./tpb")(process.argv[2]);
+  require("./tpb")(process.argv.slice(2).join(" "));
 }
 

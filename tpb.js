@@ -10,6 +10,7 @@ module.exports = function tpb(movie) {
     orderBy: "seeds",
   })
   .then(res => {
+    console.log(res);
     for(let i = 5; i > 0; i--) {
       console.log(`
 
