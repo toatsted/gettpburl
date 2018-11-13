@@ -10,28 +10,33 @@ module.exports = function tpb(movie) {
     orderBy: "seeds",
   })
   .then(res => {
-    console.log(res);
-    for(let i = 5; i > 0; i--) {
-      console.log(`
+    try {
+      for(let i = 5; i > 0; i--) {
+        console.log(`
 
 
-        ${chalk.red('name')}: 
-${res[i].name}
-        size:
-${res[i].size}
-        uploadDate:
-${res[i].uploadDate}
-        seeders:
-${res[i].seeders}
-        leechers:
-${res[i].leechers}
-        link:
-${res[i].link}
-        magnetLink:
-${res[i].magnetLink}
+          ${chalk.red('name')}: 
+  ${res[i].name}
+          size:
+  ${res[i].size}
+          uploadDate:
+  ${res[i].uploadDate}
+          seeders:
+  ${res[i].seeders}
+          leechers:
+  ${res[i].leechers}
+          link:
+  ${res[i].link}
+          magnetLink:
+  ${res[i].magnetLink}
 
-        
-                   `);
-    } 
+          
+                     `);
+      }
+    } catch(err) {
+      console.log("retry...");
+      tpb(movie);
+    }
+
   }).catch(err => console.warn(err))
 }

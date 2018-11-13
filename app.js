@@ -40,6 +40,6 @@ if( process.argv[2] === "-o" || process.argv[2] === "-u" ||
 
 
 } else {
-  require("./tpb")(process.argv.slice(2).join(" "));
+  require("./tpb.js")(process.argv.slice(2).join(" "));
 }
 
