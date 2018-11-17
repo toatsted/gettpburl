@@ -16,19 +16,19 @@ module.exports = function tpb(movie) {
 
 
           ${chalk.red('name')}: 
-  ${res[i].name}
+${res[i].name}
           size:
-  ${res[i].size}
+${res[i].size}
           uploadDate:
-  ${res[i].uploadDate}
+${res[i].uploadDate}
           seeders:
-  ${res[i].seeders}
+${res[i].seeders}
           leechers:
-  ${res[i].leechers}
+${res[i].leechers}
           link:
-  ${res[i].link}
+${res[i].link}
           magnetLink:
-  ${res[i].magnetLink}
+${res[i].magnetLink}
 
           
                      `);
